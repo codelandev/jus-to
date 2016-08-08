@@ -75,3 +75,7 @@ gem 'autoprefixer-rails', '~> 5.2.1'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails', '~> 4.4.0'
 gem 'draper', '~> 1.3'
+group :production do
+  gem 'rails_12factor', '~> 0.0.3'
+  gem 'passenger', '~> 5.0'
+end
