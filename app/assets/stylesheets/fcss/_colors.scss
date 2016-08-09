@@ -3,15 +3,22 @@
 .c-yellow { color: $yellow; }
 .c-yellow-dark { color: $yellow-dark; }
 .c-gray { color: $gray; }
+.c-gray-light { color: $gray-light; }
 .c-gray-dark { color: $gray-dark; }
 .c-black { color: $black; }
 .c-red { color: $red; }
+.c-white { color: #fff; }
 
 .bg-blue { background: $blue; }
 .bg-blue-light { background: $blue-light; }
 .bg-yellow { background: $yellow; }
 .bg-yellow-dark { background: $yellow-dark; }
+.bg-gray-light { background: $gray-light; }
 .bg-gray { background: $gray; }
 .bg-gray-dark { background: $gray-dark; }
 .bg-black { background: $black; }
 .bg-red { background: $red; }
+
+.bdc-blue { border-color: #112439; }
+.bdc-black { border-color: #0A0E13; }
+

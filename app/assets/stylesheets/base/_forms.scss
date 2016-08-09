@@ -1,0 +1,14 @@
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email], {
+  border: 0;
+  display: inline-block;
+}
+
+button {
+  display: inline-block;
+  border: none;
+}
