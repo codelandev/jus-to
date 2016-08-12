@@ -9,6 +9,11 @@
 .c-red { color: $red; }
 .c-white { color: #fff; }
 
+.c_yellow:hover,
+.c_yellow:focus {
+  color: $yellow;
+}
+
 .bg-blue { background: $blue; }
 .bg-blue-light { background: $blue-light; }
 .bg-yellow { background: $yellow; }

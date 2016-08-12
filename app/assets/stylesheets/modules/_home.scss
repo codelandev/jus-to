@@ -4,7 +4,24 @@
   height: calc(100vh - 56px);
 }
 
+.home-hero-btn {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  top: calc(100% - 20px);
+}
+
 .home-circle {
   width: 130px;
   height: 130px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-color: $blue transparent transparent;
+    border-width: 10px;
+    border-style: solid;
+    top: calc(100% - 1px); // remove a little space that draw a white line
+  }
 }

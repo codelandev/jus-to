@@ -1,27 +1,28 @@
-section.home-hero.bg-hero.bgs-cv.ta-c.d-f.ai-c.jc-c.fxd-c
+section.home-hero.bg-hero.bgs-cv.ta-c.d-f.ai-c.jc-c.fxd-c.pos-r
+  a.d-ib.home-hero-btn.bdrs-50.bg-yellow.fz-24.pos-a.c-blue href="#how-it-works"
+    = icon('angle-down')
   = image_tag 'logo_header.png', width: 200
   h2.c-white.fz-18.mT-40
     | lorem ipsum
     span.c-yellow  dolor sit a met
     |, consectetur adipiscing elit
 
-section.pY-60
+section#how-it-works.pY-60
   .container
     .fl-n.mX-a.ta-c
       h2.c-blue.ta-c.fz-20.fw-700.mB-60 Como funciona
       .d-f.jc-sb
         - 3.times do |i|
           div.mX-70
-            .home-circle.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-20
+            .home-circle.pos-r.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-20
               = image_tag "como_funciona#{i + 1}.png", size: '60x60'
-            p.c-blue.fz-12.fw-700 In nunc blandit auctor. Nulla congue urna quis lorem. Nam rhoncus pede sed nunc. Etiam vitae quam. Fusce feugiat pede vel quam. In et augue.
-
+            p.c-blue.fz-12.fw-500 In nunc blandit auctor. Nulla congue urna quis lorem. Nam rhoncus pede sed nunc. Etiam vitae quam. Fusce feugiat pede vel quam. In et augue.
 
 section.bg-gray-light.ta-c.pY-30
   .container
     h2.c-blue.mT-0.mB-20.ta-c.fw-700.fz-14 Fique por dentro, receba nossa newsletter
     .d-f.jc-c
-      input.w-20.pY-1.bdrsL-3.pX-25 type="text"
+      input.w-20.pY-1.bdrsL-3.pX-15 type="text" placeholder="Insira seu e-mail"
       button.bdrsR-3.pX-30.pY-10.bg-blue.c-white.tt-u.fz-12 Inscrever-me
 
 
