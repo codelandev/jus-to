@@ -73,7 +73,7 @@ gem 'rails-i18n', '~> 4.0.4'
 gem 'slim-rails', '~> 3.0.1'
 gem 'autoprefixer-rails', '~> 5.2.1'
 gem 'bootstrap-sass', '~> 3.3.5'
-gem 'font-awesome-rails', '~> 4.4.0'
+gem 'font-awesome-sass', '~> 4.6.2'
 gem 'draper', '~> 1.3'
 group :production do
   gem 'rails_12factor', '~> 0.0.3'
