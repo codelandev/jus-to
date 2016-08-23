@@ -1,20 +1,68 @@
 section#what-is.pY-60
   .container
     .fl-n
-      .d-f
+      .d-f.jc-sb
+        .fxb-3
+          h2.c-blue.tt-u.fz-36.mT-80 O que é?
+        .fxb-9
+          h2.c-blue.ta-c.fz-20.fw-700.mB-40 Sobre
+          ul
+            li.c-blue.mB-10 É uma plataforma colaborativa e multilateral de facilitação, mediação e resolução de questões conflitivas entre empresas e consumidores.
+            li.c-blue.mB-10 Para buscar essa resolução pré-judicial ou extrajudicial a JUS.TO conecta os usuários utilizando seu site e um aplicativo para smartphones.
+            li.c-blue.mB-10 A JUS.TO é uma plataforma de tecnologia colaborativa que conecta Agentes (advogados com formação para atuar em solução alternativa de conflitos, e para a negociação e celebração de acordos) com consumidores que tenham algum tipo de insatisfação em relação a um produto ou serviço.
+            li.c-blue.mB-10 A JUS.TO facilita o diálogo para que o problema seja solucionado de maneira dialógica, eficiente, ágil e justa.
 
 section#about-it-works.pY-60
   .container
     h2.c-white.fz-36.tt-u.mB-30 Como funciona
     .fl-n
       .d-f.jc-sb
-        - 4.times do |i|
-          .mX-40
-            h3
-              span 1
-              span cadastro
-            ul
-              li Nam sit amet aliquam justo.
-              li Nam sit amet aliquam justo.
+        .fxb-3.mX-40
+          h3.d-f.ai-c.mB-30
+            span.step 1
+            span.step-name.pY-10.pL-20.pR-40.c-white.fz-16.bg-blue.tt-u cadastro
+          ul.c-white.fz-14
+            li Você tem um problema com um serviço ou produto e não se sente satisfeito com a resposta dada pelo SAC da empresa
+            li Você se cadastra pelo site e relata o problema anexa fotos e documentos
+        .fxb-3.mX-40
+          h3.d-f.ai-c.mB-30
+            span.step 2
+            span.step-name.pY-10.pL-20.pR-40.c-white.fz-16.bg-blue.tt-u análise
+          ul.c-white.fz-14
+            li Seu caso será encaminhado para um agente JUS.TO que analisará a situação
+            li Se necessário for, este Agente poderá solicitar mais informações
+            li A questão será encaminhada para apreciação da empresa
+        .fxb-3.mX-40
+          h3.d-f.ai-c.mB-30
+            span.step 3
+            span.step-name.pY-10.pL-20.pR-40.c-white.fz-16.bg-blue.tt-u soluções
+          ul.c-white.fz-14
+            li A empresa analisará o material enviado
+            li O agente fará o contato inicial e intermediação com a empresa
+            li Havendo aceitação, o acordo é formalizado
+        .fxb-3.mX-40
+          h3.d-f.ai-c.mB-30
+            span.step 4
+            span.step-name.pY-10.pL-20.pR-40.c-white.fz-16.bg-blue.tt-u acordo
+          ul.c-white.fz-14
+            li
+              | Você poderá:
+              span.c-gray.fz-12.d-b
+                | - Aceitar alguma das opções
+              span.c-gray.fz-12.d-b
+                | - Tentar negociar uma ou mais das propostas ou
+              span.c-gray.fz-12.d-b
+                | - Negar todas as propostas feitas
+            li Em caso de negativa, a empresa oferece mais uma opção de solução
+            li Havendo aceitação, o acordo é formalizado
 
-section#want-to-be.pY-60
+section#want-to-be.pY-60.bg-blue
+  .container
+    h2.c-white.fz-36.mB-30 Quer se tornar um agente jus.to?
+    .d-f
+      .fxb-6
+        p.c-white.fz-14.fw-700 In nunc blandit auctor. Nulla congue urna quis lorem. Nam rhoncus pede sed nunc. Etiam vitae quam. Fusce feugiat pede vel quam. In et augue.
+      .fxb-6.ta-c
+        button.bdrs-3.pX-60.pY-15.bg-blue-light.c-blue.fz-1.fw-700 Quero me tornar um agente
+
+= render 'partials/newsletter'
