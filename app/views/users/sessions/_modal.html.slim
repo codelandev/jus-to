@@ -1,0 +1,19 @@
+- form_user = @user || (defined?(resource) ? resource : User.new)
+#sign_in_modal.modal.fade tabindex="-1" role="dialog"
+  .modal-dialog role="document"
+    .modal-content.w-80.mX-a
+      .modal-header.bds-n.p-0.mB-20
+        button.close.mR-20.mT-10 aria-label="Close" data-dismiss="modal" type="button"
+          span aria-hidden="true"  &times;
+        h4.modal-title.ta-c.fz-24.fw-700.mT-30 Entrar
+      .modal-body.w-80.bds-n.fl-n.mX-a.ta-c
+        = simple_form_for(form_user, as: :user, url: session_path(:user), remote: true) do |f|
+          = f.error_notification
+          = f.input :email, required: true, label: false, placeholder: 'E-mail', input_html: { class: 'mB-20 pX-10 pY-10' }
+          = f.input :password, required: true, label: false, placeholder: 'Senha', input_html: { class: 'mB-20 pX-10 pY-10' }
+          = f.input :remember_me, as: :boolean
+          = f.button :submit, "Entrar", class: 'bg-blue-light c-blue fw-700 pY-20'
+      .modal-footer.mT-20.fw-700
+        .w-80.fl-n.mX-a
+          span.fl-l.c-gray.pT-5 Não possui conta?
+          = link_to 'Cadastre-se', root_path, class:'tt-u'

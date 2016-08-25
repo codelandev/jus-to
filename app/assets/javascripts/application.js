@@ -17,6 +17,7 @@
 //= require justo/justo.js
 //= require init.js
 //= require_tree ./justo
+//= require bootstrap
 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {
