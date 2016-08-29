@@ -6,29 +6,31 @@
 [type=url],
 [type=tel],
 [type=number],
-[type=color] {
+[type=color],
+[type=password],
+[type=email] {
   border: 0;
   display: inline-block;
+  width: 100%;
 }
 
-.modal {
-  input {
-    width: 100%;
-    border: 1px solid $gray-light;
-    border-radius: 3px;
+// bootsTRAP
+[type=checkbox],
+[type=radio] {
+  position: static !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 450px;
   }
+}
+.modal {
   ::placeholder {
     color: $gray;
     font-weight: 700;
-  }
-  .modal-footer {
-    border-top: 1px solid $gray-light;
-    a {
-      padding: 8px 30px;
-      border: 1px solid $blue;
-      border-radius: 3px;
-      color: $blue;
-    }
   }
 }
 
