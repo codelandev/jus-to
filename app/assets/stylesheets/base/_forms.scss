@@ -7,9 +7,31 @@
 [type=tel],
 [type=number],
 [type=color],
-[type=email], {
+[type=password],
+[type=email] {
   border: 0;
   display: inline-block;
+  width: 100%;
+}
+
+// bootsTRAP
+[type=checkbox],
+[type=radio] {
+  position: static !important;
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 450px;
+  }
+}
+.modal {
+  ::placeholder {
+    color: $gray;
+    font-weight: 700;
+  }
 }
 
 button {

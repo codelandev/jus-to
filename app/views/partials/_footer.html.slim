@@ -3,7 +3,7 @@ footer.bg-black.pT-40
     .d-f.jc-sb.ai-c
       = image_tag 'logo_footer.png', width: '120', class: 'of-ct'
       nav
-        a.mR-25.c-white.c_yellow.tt-u.fz-12 Sobre
+        = link_to 'Sobre', about_path, class:  'mR-25 c-white c_yellow tt-u fz-12'
         a.mR-25.c-white.c_yellow.tt-u.fz-12 Contato
         a.c-white.c_yellow.tt-u.fz-12 Termos legais
   hr.bdc-black.mB-0
@@ -12,3 +12,6 @@ footer.bg-black.pT-40
       span.mR-10.op-05 Av. Nome da Avenida, xxx - Porto Alegre/RS
       span.fw-700 (51) 3333-3333 - contato@jus.to
 
+/ modals
+= render 'users/registrations/modal'
+= render 'users/sessions/modal'

@@ -1,0 +1,30 @@
+#about-it-works {
+  background-image: asset-url('bg_header.png');
+  background-size: cover;
+  background-position: center center;
+  span.step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+    z-index: 1;
+    color: $blue;
+  }
+  span.step-name {
+    margin-left: -10px;
+  }
+  ul {
+    padding: 0;
+    li {
+      margin-bottom: 20px;
+      list-style: none;
+    }
+    li:before {
+      content: "• ";
+      color: $yellow;
+    }
+  }
+}
