@@ -37,6 +37,8 @@ gem 'font-awesome-sass', '~> 4.6.2'
 gem 'draper', '~> 1.3'
 # Forms made easy for Rails!
 gem 'simple_form'
+# Simple and easy flash messages
+gem 'toastr_rails'
 
 group :development, :test do
   # 'byebug' anywhere in the code to stop execution and get a debugger console
