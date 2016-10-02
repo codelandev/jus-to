@@ -7,10 +7,11 @@
         h4.modal-title.ta-c.fz-24.fw-700 Cadastre-se
       .modal-body.pX-40
         = simple_form_for(form_user, as: :user, url: registration_path(:user), remote: true) do |f|
-          = f.error_notification
-          = f.input :email, required: true, label: false, placeholder: 'E-mail', input_html: { class: 'mB-20 pX-10 pY-10 bd bdrs-3' }
-          = f.input :password, required: true, label: false, placeholder: 'Senha', input_html: { class: 'mB-20 pX-10 pY-10 bd bdrs-3' }
-          = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirmar senha', input_html: { class: 'mB-20 pX-10 pY-10 bd bdrs-3' }
+          = f.input :email, required: true, label: false, placeholder: 'E-mail', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+          br
+          = f.input :password, required: true, label: false, placeholder: 'Senha', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+          br
+          = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirmar senha', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
           .mY-20
             = f.input :remember_me, as: :boolean, class: 'mY-20'
           = f.button :submit, "Cadastre-se", class: 'bg-blue-light c-blue fw-700 pY-20 w-100'
