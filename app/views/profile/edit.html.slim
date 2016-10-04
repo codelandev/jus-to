@@ -1,0 +1,16 @@
+.container
+  = simple_form_for @profile, url: update_profile_path do |f|
+    = f.input :name
+    = f.input :address_zip_code
+    = f.input :address_street
+    = f.input :address_number
+    = f.input :address_complement
+    = f.input :address_city
+    = f.input :address_state
+    = f.input :cpf
+    = f.input :rg
+    = f.input :phone_number
+    = f.input :phone_area_code
+    = f.input :alternative_phone_number
+    = f.input :alternative_phone_area_code
+    = f.submit
