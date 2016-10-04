@@ -1,0 +1,20 @@
+pt-BR:
+  activerecord:
+    models:
+      profile:
+        one: Perfil
+        other: Perfis
+    attributes:
+      profile:
+        address_city: Cidade
+        address_complement: Complemento
+        address_number: Número
+        address_state: Estado
+        address_street: Rua
+        alternative_phone: Telefone (outro)
+        cpf: CPF
+        email: E-mail
+        name: Nome
+        phone: Telefone
+        rg: RG
+        zip_code: CEP
