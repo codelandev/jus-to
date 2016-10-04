@@ -12,9 +12,11 @@ pt-BR:
         address_state: Estado
         address_street: Rua
         address_zip_code: CEP
-        alternative_phone: Telefone (outro)
+        alternative_phone_area_code: DDD
+        alternative_phone_number: Telefone (outro)
         cpf: CPF
         email: E-mail
         name: Nome
-        phone: Telefone
+        phone_area_code: DDD
+        phone_number: Telefone
         rg: RG
