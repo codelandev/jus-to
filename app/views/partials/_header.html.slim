@@ -1,9 +1,10 @@
 header.bg-blue.pY-1
   .container
     .d-f.jc-sb.ai-c
-      = image_tag 'logo_menu.png', width: '110'
+      = link_to root_path do
+        = image_tag 'logo_menu.png', width: '100'
       nav
         = link_to 'Sobre', about_path, class:  'fz-12 c-white c_yellow mR-40'
         a.fz-12.c-white.c_yellow.mR-60 Contato
         a.fz-12.c-white.c_yellow.mR-20.tt-u data-toggle="modal" data-target="#sign_in_modal" Entrar
-        a.fz-12.c-white.c_yellow.tt-u.bd.bdc-blue.pY-1.pX-2.bdrs-3 data-toggle="modal" data-target="#sign_up_modal" Cadastre-se
+        a.fz-12.c-white.c_yellow.tt-u.bd.bdc-blue-hr.pY-1.pX-2.bdrs-3 data-toggle="modal" data-target="#sign_up_modal" Cadastre-se

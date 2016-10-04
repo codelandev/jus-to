@@ -3,6 +3,7 @@
 .c-yellow { color: $yellow; }
 .c-yellow-dark { color: $yellow-dark; }
 .c-gray { color: $gray; }
+.c-gray-lighter { color: $gray-lighter; }
 .c-gray-light { color: $gray-light; }
 .c-gray-dark { color: $gray-dark; }
 .c-black { color: $black; }
@@ -19,12 +20,13 @@
 .bg-blue-light { background: $blue-light; }
 .bg-yellow { background: $yellow; }
 .bg-yellow-dark { background: $yellow-dark; }
+.bg-gray-lighter { background: $gray-lighter; }
 .bg-gray-light { background: $gray-light; }
 .bg-gray { background: $gray; }
 .bg-gray-dark { background: $gray-dark; }
 .bg-black { background: $black; }
 .bg-red { background: $red; }
 
-.bdc-blue { border-color: #112439; }
-.bdc-black { border-color: #0A0E13; }
-
+.bdc-blue-hr { border-color: #112439; }
+.bdc-black-hr { border-color: #0A0E13; }
+.bdc-gray-dark { border-color: $gray-dark; }
