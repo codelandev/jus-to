@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :profile do
     user
     name 'Name'
-    zip_code '90440-150'
+    address_zip_code '90440-150'
     address_street 'Rua Felipe Neri'
     address_number '128'
     address_complement 'sala 201'

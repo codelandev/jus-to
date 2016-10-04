@@ -11,10 +11,10 @@ pt-BR:
         address_number: Número
         address_state: Estado
         address_street: Rua
+        address_zip_code: CEP
         alternative_phone: Telefone (outro)
         cpf: CPF
         email: E-mail
         name: Nome
         phone: Telefone
         rg: RG
-        zip_code: CEP

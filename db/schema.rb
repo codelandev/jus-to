@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20161004030335) do
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
-    t.string   "zip_code"
+    t.string   "address_zip_code"
     t.string   "address_street"
     t.string   "address_number"
     t.string   "address_complement"

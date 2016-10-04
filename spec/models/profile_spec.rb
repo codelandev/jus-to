@@ -6,7 +6,7 @@ RSpec.describe Profile, type: :model do
 
     it { is_expected.to validate_presence_of(:user) }
     it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:zip_code) }
+    it { is_expected.to validate_presence_of(:address_zip_code) }
     it { is_expected.to validate_presence_of(:address_street) }
     it { is_expected.to validate_presence_of(:address_number) }
     it { is_expected.to validate_presence_of(:address_complement) }

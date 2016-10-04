@@ -3,7 +3,7 @@ class CreateProfiles < ActiveRecord::Migration
     create_table :profiles do |t|
       t.references :user, index: true
       t.string :name
-      t.string :zip_code
+      t.string :address_zip_code
       t.string :address_street
       t.string :address_number
       t.string :address_complement

@@ -4,13 +4,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_save :create_profile!
+  after_create :create_profile!
 
   has_one :profile
 
-
   private
   def create_profile!
-    self.profile.create(validate: false)
+    self.build_profile
+    self.profile.save(validate: false)
   end
 end
