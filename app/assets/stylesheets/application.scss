@@ -2,13 +2,13 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "toastr_rails";
 
 @import "base/base";
 @import "base/colors";
 @import "base/typography";
 @import "base/forms";
 
-@import "modules/flash";
 @import "modules/home";
 @import "modules/about";
 @import "modules/buttons";

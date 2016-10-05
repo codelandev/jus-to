@@ -18,6 +18,7 @@
 //= require init.js
 //= require_tree ./justo
 //= require bootstrap
+//= require toastr_rails
 
 $(function() {
   $('[data-smooth-scroll="true"]').click(function() {

@@ -7,12 +7,12 @@
         h4.modal-title.ta-c.fz-24.fw-700 Entrar
       .modal-body.pX-40
         = simple_form_for(form_user, as: :user, url: session_path(:user), remote: true) do |f|
-          = f.error_notification
-          = f.input :email, required: true, label: false, placeholder: 'E-mail', input_html: { class: 'mB-20 pX-10 pY-10 bd bdrs-3' }
-          = f.input :password, required: true, label: false, placeholder: 'Senha', input_html: { class: 'mB-20 pX-10 pY-10 bd bdrs-3' }
+          = f.input :email, required: true, label: false, placeholder: 'E-mail', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+          br
+          = f.input :password, required: true, label: false, placeholder: 'Senha', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
           .mY-20
             = f.input :remember_me, as: :boolean
           = f.button :submit, "Entrar", class: 'bg-blue-light c-blue fw-700 pY-20 w-100'
       .bdT.bdc-gray.pY-20.pX-40.mT-20.fw-700.d-f.jc-sb.ai-c
         span.fl-l.c-gray.pT-5 Não possui conta?
-        = link_to 'Cadastre-se', root_path, class:'tt-u bd bdc-blue-hr c-blue pY-1 bdrs-3 pX-20'
+        a.tt-u.bd.bdc-blue.c-blue.pY-1.bdrs-3.pX-20 data-dismiss="modal" data-toggle="modal" data-target="#sign_up_modal"  Cadastre-se

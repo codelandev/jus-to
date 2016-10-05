@@ -10,7 +10,6 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'shoulda-matchers'
-require Rails.root.join('spec', 'support', 'blueprints.rb')
 
 Capybara.javascript_driver = :selenium
 Capybara.server_port = 52662
@@ -38,6 +37,10 @@ Capybara.exact = true
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include FactoryGirl::Syntax::Methods
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -60,16 +63,16 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
-config.before(:suite) do
-  DatabaseCleaner.strategy = :transaction
-  DatabaseCleaner.clean_with(:truncation)
-end
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
 
-config.before(:each) do
-  DatabaseCleaner.start
-end
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
 
-config.after(:each) do
-  DatabaseCleaner.clean
-end
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 end

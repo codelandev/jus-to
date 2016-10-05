@@ -13,7 +13,7 @@ html
 
   body
     = initjs_tag "Justo"
-    = render 'layouts/flash' if flash.any?
+    = render 'toastr_rails/flash'
     = render 'partials/header'
     = yield
     = render 'partials/footer'
