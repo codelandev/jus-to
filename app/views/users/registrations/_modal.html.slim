@@ -14,6 +14,7 @@
           = f.input :password_confirmation, required: true, label: false, placeholder: 'Confirmar senha', input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
           .mY-20
             = f.input :remember_me, as: :boolean, class: 'mY-20'
+            = f.input :terms_of_service, as: :boolean, label: 'Aceito os termos.'
           = f.button :submit, "Cadastre-se", class: 'bg-blue-light c-blue fw-700 pY-20 w-100'
       .bdT.bdc-gray.pY-20.pX-40.mT-20.fw-700.d-f.jc-sb.ai-c
         span.fl-l.c-gray.pT-5 Já possui conta?

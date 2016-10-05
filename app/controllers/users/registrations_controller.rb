@@ -1,4 +1,6 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  before_action :configure_permitted_parameters
+  
   def create
     build_resource(sign_up_params)
 
@@ -18,6 +20,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
     end
   end
+
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:terms_of_service, :remember_me])
+  end
 end
-
-
