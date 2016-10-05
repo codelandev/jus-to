@@ -9,15 +9,14 @@
 @import "base/forms";
 
 @import "modules/flash";
-@import "modules/header";
-@import "modules/footer";
 @import "modules/home";
 @import "modules/about";
 @import "modules/buttons";
 
-@import "fcss/funkcss-flex-grid";
-@import "fcss/funkcss";
+@import "vendor/funkcss";
+@import "vendor/funkcss-responsive";
+@import "vendor/funkcss-flex-grid";
+
 @import "fcss/colors";
 @import "fcss/font-scale";
-@import "fcss/width";
-@import "fcss/opacity";
+@import "fcss/sizes";
