@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_one :profile
 
+  validates :terms_of_service, acceptance: true
+
   private
   def create_profile!
     self.build_profile
