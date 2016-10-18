@@ -1,16 +1,43 @@
-.container
-  = simple_form_for @profile, url: update_profile_path do |f|
-    = f.input :name
-    = f.input :address_zip_code
-    = f.input :address_street
-    = f.input :address_number
-    = f.input :address_complement
-    = f.input :address_city
-    = f.input :address_state
-    = f.input :cpf
-    = f.input :rg
-    = f.input :phone_number
-    = f.input :phone_area_code
-    = f.input :alternative_phone_number
-    = f.input :alternative_phone_area_code
-    = f.submit
+.container.pT-50.pB-100
+  .md-w-60.mX-a
+    h1.fw-900.fz-24.ta-c.mB-40
+      | Antes de começar, precisamos
+      br
+      | de algumas informações
+    = simple_form_for @profile, url: update_profile_path, html: { class: 'bdrs-3 bd pX-100 pY-4' } do |f|
+      .mB-3
+        = f.input :name, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .mB-3
+        = f.input :address_zip_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .mB-3
+        = f.input :address_street, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .d-f.mX-2n
+        .md-1-2.pX-2
+          .mB-3
+            = f.input :address_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        .md-1-2.pX-2
+          .mB-3
+            = f.input :address_complement, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .d-f.mX-2n
+        .mB-3.pX-2
+          = f.input :address_city, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        .mB-3.pX-2
+          = f.input :address_state, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .d-f.mX-2n
+        .mB-3.pX-2
+          = f.input :cpf, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        .mB-3.pX-2
+          = f.input :rg, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .d-f.mX-2n
+        .mB-3.pX-2
+          = f.input :phone_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        .mB-3.pX-2
+          = f.input :phone_area_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      .d-f.mX-2n
+        .mB-3.pX-2
+          = f.input :alternative_phone_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        .mB-3.pX-2
+          = f.input :alternative_phone_area_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+      = button_tag type: 'submit', class: 'd-b fw-700 w-100 mT-30 pY-15 bdrs-3 bg-blue-light c-blue-dark' do
+        | Concluir
+        = icon('arrow-right', class: 'mL-10')

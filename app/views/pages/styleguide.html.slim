@@ -1,9 +1,9 @@
 section
   .container
     h1 Jus.to Styleguide
-    
+
     h2 Blank state
-    
+
     .circle.bg-gray-lighter.ta-c.c-blue.pY-100.pX-20.md-pX-0.md-bdrs-50.half-screen-square.mY-50.mX-a
       = image_tag 'logo-smile.png', class: 'maw-100'
       h2 Bem Vindo ao Jus.to
@@ -14,4 +14,54 @@ section
       button.bdrs-3.md-w-50.pX-70.pY-15.bg-blue-light.c-blue.fz-1.fw-500
         = icon('plus', class: 'mR-10')
         | Novo caso
-      
+
+    h2 Meus casos
+    .bg-blue.c-white.bdrs-3.w-80.mX-a
+      .d-f
+        .md-fxb-2-3.pX-40.pY-20
+          / ===============
+          .d-f.ai-c.mB-20
+            span.bg-blue-dark.fz-12.tt-u.c-white.pX-20.pY-10.d-b.mR-20 caso número pr-0012x99a
+            .d-f.ai-c
+              = image_tag 'logo_header.png', size: '30x30', class: 'bdrs-50 of-cv bd bdc-blue'
+              .d-f.fxd-c.jc-c
+                span.fw-700.d-b Ricardo S.
+                span.fw-300.fz-8.tt-u Agente jus.to
+          / ===============
+          .fz-12
+            span.fw-300.mR-5 Submetido dia:
+            span.fw-700 15/07/2016
+          /================
+          .mT-20.mB-25
+            span.fw-300.tt-u.fz-10.d-b Empresa
+            h3.fw-400.mT-0 Telefónica
+          /================
+          span.fw-300.tt-u.fz-10 Assunto
+          p Operador telefonica me cobra de telefone que nunca usei e acabei no serasa
+          a.mT-15.c-white.tt-u.fz-12
+            | Ver descrição
+            = icon('angle-down', class: 'mL-5')
+
+        .md-fxb-1-3.bdL.bdc-gray-hr.pX-4.pY-20.d-f.fxd-c.ai-sb.jc-sb.ta-c
+          div
+            #circle
+            span.d-b.mT-2.op-05 Para o próximo retorno
+          a.as-fe.bg-yellow.c-blue.w-100.d-b.fw-700.pY-10.ta-c.bdrs-3 Ver mensagem
+
+javascript:
+  var myCircle = Circles.create({
+    id:                  'circle',
+    radius:              60,
+    value:               7,
+    maxValue:            14,
+    width:               18,
+    text:                function(value){return value + '<span class="d-b fz-12">dias<span>';},
+    colors:              ['#102134', '#FCEB16'],
+    duration:            0,
+    wrpClass:            'circles-wrp',
+    textClass:           'circles-text',
+    valueStrokeClass:    'circles-valueStroke',
+    maxValueStrokeClass: 'circles-maxValueStroke',
+    styleWrapper:        true,
+    styleText:           false
+  });

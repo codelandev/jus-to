@@ -1,5 +1,6 @@
 .c-blue { color: $blue; }
 .c-blue-light { color: $blue-light; }
+.c-blue-dark { color: $blue-dark; }
 .c-yellow { color: $yellow; }
 .c-yellow-dark { color: $yellow-dark; }
 .c-gray { color: $gray; }
@@ -16,6 +17,7 @@
 }
 
 .bg-white { background: #fff; }
+.bg-blue-dark { background: $blue-dark; }
 .bg-blue { background: $blue; }
 .bg-blue-light { background: $blue-light; }
 .bg-yellow { background: $yellow; }
@@ -29,4 +31,7 @@
 
 .bdc-blue-hr { border-color: #112439; }
 .bdc-black-hr { border-color: #0A0E13; }
+.bdc-gray-hr { border-color: #23354F; }
+.bdc-gray-light { border-color: $gray-light; }
+.bdc-gray { border-color: $gray; }
 .bdc-gray-dark { border-color: $gray-dark; }
