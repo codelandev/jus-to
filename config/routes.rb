@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   get '/perfil', to: 'profile#edit', as: :profile
   patch '/perfil', to: 'profile#update', as: :update_profile
+
+  get '/casos', to: 'legal_cases#index', as: :legal_cases
+  post '/casos', to: 'legal_cases#create', as: nil
+  get '/casos/novo', to: 'legal_cases#new', as: :new_legal_case
+  get '/casos/:id', to: 'legal_cases#show', as: :legal_case
 end
