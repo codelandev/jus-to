@@ -10,6 +10,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'shoulda-matchers'
+require 'pundit/rspec'
 
 Capybara.javascript_driver = :selenium
 Capybara.server_port = 52662
