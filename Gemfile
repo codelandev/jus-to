@@ -39,6 +39,8 @@ gem 'draper', '~> 1.3'
 gem 'simple_form'
 # Simple and easy flash messages
 gem 'toastr_rails'
+# Minimal authorization through OO design and pure Ruby classes
+gem 'pundit'
 
 group :development, :test do
   # 'byebug' anywhere in the code to stop execution and get a debugger console

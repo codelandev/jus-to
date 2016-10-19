@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_one :profile
 
+  has_many :legal_cases
+
   validates :terms_of_service, acceptance: true
 
   private

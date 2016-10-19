@@ -1,0 +1,8 @@
+h1 Novo Caso
+= simple_form_for @case do |f|
+  = f.input :subject
+  = f.input :company
+  = f.input :description
+  = f.submit
+br
+= link_to 'Voltar', legal_cases_path
