@@ -11,7 +11,7 @@ class LegalCasePolicy < ApplicationPolicy
 
   def new?
     return false unless user
-    user.is_a?(User) && user.profile.valid?
+    !user.is_a?(Agent) && user.profile.valid?
   end
 
   def create?
