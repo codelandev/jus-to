@@ -16,15 +16,15 @@ section
         | Novo caso
 
     h2 Meus casos
-    .bg-blue.c-white.bdrs-3.w-80.mX-a
-      .d-f
+    .bg-blue.c-white.bdrs-3.md-w-80.mX-a
+      .d-f.fxw-w
         .md-fxb-2-3.pX-40.pY-20
           / ===============
-          .d-f.ai-c.mB-20
+          .d-f.fxw-w.ai-c.mB-20
             span.bg-blue-dark.fz-12.tt-u.c-white.pX-20.pY-10.d-b.mR-20 caso número pr-0012x99a
             .d-f.ai-c
               = image_tag 'logo_header.png', size: '30x30', class: 'bdrs-50 of-cv bd bdc-blue'
-              .d-f.fxd-c.jc-c
+              .d-f.fxd-c.jc-c.mT-30
                 span.fw-700.d-b Ricardo S.
                 span.fw-300.fz-8.tt-u Agente jus.to
           / ===============
@@ -45,8 +45,49 @@ section
         .md-fxb-1-3.bdL.bdc-gray-hr.pX-4.pY-20.d-f.fxd-c.ai-sb.jc-sb.ta-c
           div
             #circle
-            span.d-b.mT-2.op-05 Para o próximo retorno
+            span.d-b.mT-2.mB-2.md-mB-0.op-05 Para o próximo retorno
           a.as-fe.bg-yellow.c-blue.w-100.d-b.fw-700.pY-10.ta-c.bdrs-3 Ver mensagem
+
+    h2 Messages
+    .Messages.md-w-80.mX-a.c-white.mY-40.bdrs-3.ov-h
+      .bg-blue.pL-30.pY-20.d-f.fxw-w
+        / =====================
+        .md-fxb-11.pR-20
+          .d-f.ai-b.jc-sb
+            h4.c-blue-light Ricardo S.
+            .fz-12
+              span.fw-300 Recebida dia:
+              span.fw-500  15/07/2016
+          / =====================
+          p.fw-700.mB-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        / =====================
+        .md-fxb-1.ta-r.md-ta-c.p-20.md-p-0
+          button.bdrs-3.bg-blue-light.c-blue = icon('reply', class: 'fa-fw fz-20 pY-1')
+      .bg-blue-dark.pL-30.pY-20.d-f.fxw-w
+        .md-fxb-11.pR-20
+          .d-f.ai-b.jc-sb
+            strong.d-b.mB-1 Paulo Oliveira
+            .fz-12.ta-r
+              span.fw-300 Enviada dia:
+              span.fw-500  15/07/2016
+          p.fw-300.mB-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        .md-fxb-1.d-f.ai-c.jc-c
+          button.bg-t
+            = icon('angle-down', class: 'fz-22')
+      .bg-blue-dark.pL-30.pY-20.d-f.fxw-w.bdT.bdc-gray-hr
+        .md-fxb-11.pR-20
+          .d-f.ai-b.jc-sb
+            strong.d-b.mB-1 Paulo Oliveira
+            .fz-12.ta-r
+              span.fw-300 Enviada dia:
+              span.fw-500  15/07/2016
+          p.fw-300.mB-0 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        .md-fxb-1.d-f.ai-c.jc-c
+          button.bg-t
+            = icon('angle-down', class: 'fz-22')
+
+
+
 
 javascript:
   var myCircle = Circles.create({
