@@ -11,9 +11,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  body
+  body.h-100.d-f.fxd-c
     = initjs_tag "Justo"
     = render 'toastr_rails/flash'
     = render 'partials/header'
-    = yield
+    .fx-1
+      = yield
     = render 'partials/footer'
