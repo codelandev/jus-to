@@ -8,12 +8,9 @@ section.pT-20.pB-100
         = f.email_field :email, autofocus: true, class: 'pX-10 pY-10 bd bdrs-3'
       .mB-3
         = f.label :password
-        - if @minimum_password_length
-          em
-            | (
-            = @minimum_password_length
-            |  characters minimum)
         = f.password_field :password, autocomplete: "off", class: 'pX-10 pY-10 bd bdrs-3'
+        - if @minimum_password_length
+          em = "No mínimo #{@minimum_password_length} caracteres"
       .mB-4
         = f.label :password_confirmation
         = f.password_field :password_confirmation, autocomplete: "off", class: 'pX-10 pY-10 bd bdrs-3'

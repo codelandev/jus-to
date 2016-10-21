@@ -13,7 +13,8 @@ header.bg-blue.pY-1
               span.mX-2 = current_user.name
               = icon('caret-down')
             nav.dropdown-menu.bg-blue-dark
-              = link_to 'Sair', destroy_user_session_path, method: :delete, class: 'd-b w-100 ta-c c-white c_yellow'
+              = link_to 'Editar Perfil', edit_user_registration_path, class: 'd-b w-100 ta-c c-white c_yellow pY-10'
+              = link_to 'Sair', destroy_user_session_path, method: :delete, class: 'd-b w-100 ta-c c-white c_yellow pY-10'
         - else
           a.fz-12.c-white.c_yellow.mR-20.tt-u data-toggle="modal" data-target="#sign_in_modal" Entrar
           a.fz-12.c-white.c_yellow.tt-u.bd.bdc-blue-hr.pY-1.pX-2.bdrs-3 data-toggle="modal" data-target="#sign_up_modal" Cadastre-se
