@@ -7,12 +7,13 @@ header.bg-blue.pY-1
         = link_to 'Sobre', about_path, class:  'fz-12 c-white c_yellow mR-40'
         a.fz-12.c-white.c_yellow.mR-60 Contato
         - if user_signed_in?
-          button.fz-12.c-white.c_yellow.mR-20.tt-u.bd.bdc-blue-hr.pX-3.pY-1.bdrs-3.bg-blue.c-blue-dark
-            = icon('user')
-            span.mX-2 Olá Paulo Renato
-            = icon('caret-down')
-          .d-n
-            = link_to 'Sair', destroy_user_session_path, method: :delete
+          .dropdown.d-ib
+            button.fz-12.c-white.c_yellow.mR-20.bd.bdc-blue-hr.pX-3.pY-1.bdrs-3.bg-blue.c-blue-dark data-toggle="dropdown"
+              = icon('user')
+              span.mX-2 = current_user.name
+              = icon('caret-down')
+            nav.dropdown-menu.bg-blue-dark
+              = link_to 'Sair', destroy_user_session_path, method: :delete, class: 'd-b w-100 ta-c c-white c_yellow'
         - else
           a.fz-12.c-white.c_yellow.mR-20.tt-u data-toggle="modal" data-target="#sign_in_modal" Entrar
           a.fz-12.c-white.c_yellow.tt-u.bd.bdc-blue-hr.pY-1.pX-2.bdrs-3 data-toggle="modal" data-target="#sign_up_modal" Cadastre-se

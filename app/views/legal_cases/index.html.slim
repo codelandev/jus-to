@@ -1,3 +1,9 @@
-h1 Casos
-= link_to 'Novo Caso', new_legal_case_path
-= render @cases
+section.pT-20.pB-100
+  .container
+    .md-w-80.mX-a
+      h2.ta-c.mB-60.c-blue Casos
+      .ta-r.mB-60.d-f.jc-fe
+        = link_to new_legal_case_path, class: 'fxb-1-3 bg-blue-light fw-700 pY-10 pX-50 c-white ta-c bdrs-3' do
+          = icon('plus', class: 'mR-1')
+          | Novo Caso
+      = render @cases
