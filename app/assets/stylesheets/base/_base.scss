@@ -6,3 +6,12 @@ a {
     text-decoration: none;
   }
 }
+
+.circles-text {
+  font-size: 36px;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}

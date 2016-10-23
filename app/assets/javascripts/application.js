@@ -18,6 +18,7 @@
 //= require init.js
 //= require_tree ./justo
 //= require bootstrap
+//= require circles
 //= require toastr_rails
 
 $(function() {

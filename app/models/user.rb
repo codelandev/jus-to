@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 
   validates :terms_of_service, acceptance: true
 
+  delegate :name, to: :profile, allow_nil: true
+
   private
   def create_profile!
     self.build_profile

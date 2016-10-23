@@ -1,24 +1,19 @@
-h2
-  | Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      em
-        | (
-        = @minimum_password_length
-        |  characters minimum)
-    br
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    br
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+section.pT-20.pB-100
+  .container
+    h2.ta-c.mB-50.c-blue Cadastrar-se
+    = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'bd md-w-50 mX-a pX-40 pY-30' }) do |f|
+      = devise_error_messages!
+      .mB-3
+        = f.label :email
+        = f.email_field :email, autofocus: true, class: 'pX-10 pY-10 bd bdrs-3'
+      .mB-3
+        = f.label :password
+        = f.password_field :password, autocomplete: "off", class: 'pX-10 pY-10 bd bdrs-3'
+        - if @minimum_password_length
+          em = "No mínimo #{@minimum_password_length} caracteres"
+      .mB-4
+        = f.label :password_confirmation
+        = f.password_field :password_confirmation, autocomplete: "off", class: 'pX-10 pY-10 bd bdrs-3'
+      .mB-3.ta-r
+        = f.submit 'Cadastrar', class: 'bg-blue-light bdw-0 pX-3 c-white pY-1 bdrs-3 fz-16'
+      = render "users/shared/links"
