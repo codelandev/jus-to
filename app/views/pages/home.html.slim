@@ -3,19 +3,38 @@ section.home-hero.bg-hero.bgsz-cv.ta-c.d-f.ai-c.jc-c.fxd-c.pos-r
     = icon('angle-down')
   = image_tag 'logo_header.png', width: 200
   h2.c-white.fz-18.mT-40
-    | lorem ipsum
-    span.c-yellow  dolor sit a met
-    |, consectetur adipiscing elit
+    |Uma
+    span.c-yellow  nova forma 
+    |de resolver problemas entre empresas e consumidores
+    br
+    br
+    |O
+    span.c-yellow  Jus.to 
+    |é 
+    span.c-yellow humano
+    |, 
+    span.c-yellow eficiente 
+    |e 
+    span.c-yellow ágil
 
 section#how-it-works.pY-60
   .container
     .mX-a.ta-c
       h2.c-blue.fz-20.fw-700.mB-60 Como funciona
       .d-f.fxw-w.jc-sb
-        - 3.times do |i|
-          .md-fxb-1-3.pX-60
-            .home-circle.pos-r.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-30
-              = image_tag "como_funciona#{i + 1}.png", size: '60x60'
-            p.c-blue.fz-12.fw-500 In nunc blandit auctor. Nulla congue urna quis lorem. Nam rhoncus pede sed nunc. Etiam vitae quam. Fusce feugiat pede vel quam. In et augue.
+        / - 3.times do |i|
+        .md-fxb-1-3.pX-60
+          .home-circle.pos-r.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-30
+            = image_tag "como_funciona1.png", size: '60x60'
+          p.c-blue.fz-12.fw-500 Você tem um problema, faz o cadastro e relata o problema anexando as fotos dos documentos para que um agente justo possa avaliar seu caso.
+        .md-fxb-1-3.pX-60
+          .home-circle.pos-r.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-30
+            = image_tag "como_funciona2.png", size: '60x60'
+          p.c-blue.fz-12.fw-500 O agente verifica seu caso e documentos, envia para a empresa e realiza o processo de mediação até que achar uma solução justa.
+        .md-fxb-1-3.pX-60
+          .home-circle.pos-r.bg-blue.bdrs-50.p-4.d-f.ai-c.jc-c.mX-a.mB-30
+            = image_tag "como_funciona3.png", size: '60x60'
+          p.c-blue.fz-12.fw-500 Você aceita a proposta e realiza acordo mediado, avalia o agente, a empresa e decide quanto você quer pagar pelo serviço de mediação
+
 
 = render 'partials/newsletter'
