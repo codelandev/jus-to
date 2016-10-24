@@ -1,18 +1,17 @@
-h2
-  | Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    br
-    = f.email_field :email, autofocus: true
-  .field
-    = f.label :password
-    br
-    = f.password_field :password, autocomplete: "off"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "users/shared/links"
+section.pT-20.pB-100
+  .container
+    h2.ta-c.mB-50.c-blue Entrar
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'bd md-w-50 mX-a pX-40 pY-30' }) do |f|
+      .mB-3
+        = f.label :email
+        = f.email_field :email, autofocus: true, class: 'pX-10 pY-10 bd bdrs-3'
+      .mB-4
+        = f.label :password
+        = f.password_field :password, autocomplete: "off", class: 'pX-10 pY-10 bd bdrs-3'
+      .mB-4.d-f.ai-c.jc-sb
+        - if devise_mapping.rememberable?
+        div
+          = f.check_box :remember_me
+          = f.label :remember_me
+        = f.submit 'Entrar', class: 'bg-blue-light bdw-0 pX-3 c-white pY-1 bdrs-3 fz-16'
+      = render "users/shared/links"

@@ -1,0 +1,17 @@
+section.pT-20.pB-100
+  .container
+    .md-w-80.mX-a
+      header.mB-60
+        h1.c-blue
+          = icon('hashtag', class: 'mR-1 c-blue-dark')
+          | pr-0012x99a
+        span = l @case.created_at, format: :short
+      .mB-4
+        h3.c-blue Empresa
+        = @case.company
+      .mB-4
+        h3.c-blue Assunto
+        = @case.subject
+      .mB-4
+        h3.c-blue Descrição
+        = @case.description

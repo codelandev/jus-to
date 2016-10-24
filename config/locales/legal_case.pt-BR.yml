@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      legal_case:
+        one: Caso
+        other: Casos
+    attributes:
+      legal_case:
+        subject: Assunto
+        company: Empresa
+        description: Descrição

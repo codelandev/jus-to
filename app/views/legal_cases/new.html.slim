@@ -1,0 +1,19 @@
+section.pT-20.pB-100
+  .container
+    h2.ta-c.mB-50.c-blue Novo caso
+    = simple_form_for @case, html: { class: 'bd md-w-50 mX-a pX-40 pY-30' } do |f|
+      .mB-3
+        = f.label :subject
+        = f.input :subject, label: false, input_html: { class: 'w-100 d-b bd bdrs-3 p-10' }
+      .mB-3
+        = f.label :company
+        = f.input :company, label: false, input_html: { class: 'p-10 bd bdrs-3' }
+      .mB-4
+        = f.label :description
+        = f.input :description, label: false, input_html: { class: 'w-100 d-b bd bdrs-3 p-10' }
+
+      .ta-r.d-f.jc-sb.ai-c
+        = link_to legal_cases_path do
+          = icon('angle-left', class: 'mR-5')
+          | Voltar
+        = f.submit class: 'bg-blue-light bdw-0 pX-3 c-white pY-1 bdrs-3 fz-16'
