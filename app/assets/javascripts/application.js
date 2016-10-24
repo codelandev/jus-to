@@ -19,6 +19,7 @@
 //= require_tree ./justo
 //= require bootstrap
 //= require circles
+//= require vanilla-mask
 //= require toastr_rails
 
 $(function() {
@@ -33,5 +34,21 @@ $(function() {
         return false;
       }
     }
+  });
+
+  $('[data-mask="cpf"]').each(function (i, elem) {
+    VMasker(elem).maskPattern("999.999.999-99");
+  });
+
+  $('[data-mask="cep"]').each(function (i, elem) {
+    VMasker(elem).maskPattern("99.999-999");
+  });
+
+  $('[data-mask="date"]').each(function (i, elem) {
+    VMasker(elem).maskPattern("99/99/9999");
+  });
+
+  $('[data-mask="phone"]').each(function (i, elem) {
+    VMasker(elem).maskPattern("9999-99999");
   });
 });
