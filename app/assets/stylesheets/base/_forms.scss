@@ -53,3 +53,16 @@ button {
     color: #77787B;
   }
 }
+
+.message-box {
+  height: 100px;
+  transition: all .3s;
+
+  &.is-expanded {
+    height: 200px;
+  }
+
+  &.is-contracted {
+    height: 50px;
+  }
+}
