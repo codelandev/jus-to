@@ -1,43 +1,83 @@
-.container.pT-50.pB-100
-  .md-w-60.mX-a
-    / h1.fw-900.fz-24.ta-c.mB-40
-    /   | Antes de começar, precisamos
-    /   br
-    /   | de algumas informações
-    = simple_form_for @profile, url: update_profile_path, html: { class: 'bdrs-3 bd pX-100 pY-4' } do |f|
+.container.pT-20.pB-100
+  .md-w-50.mX-a
+    h2.ta-c.mB-50.c-blue
+      | Meu perfil
+    = simple_form_for @profile, url: update_profile_path, html: { class: 'bdrs-3 bd md-pX-4 pY-4' } do |f|
       .mB-3
-        = f.input :name, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .mB-3
-        = f.input :address_zip_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .mB-3
-        = f.input :address_street, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .d-f.mX-2n
-        .md-1-2.pX-2
-          .mB-3
-            = f.input :address_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-        .md-1-2.pX-2
-          .mB-3
-            = f.input :address_complement, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+        = f.input :name, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
       .d-f.mX-2n
         .mB-3.pX-2
-          = f.input :address_city, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
+          = f.input :cpf, input_html: { class: 'pX-10 pY-10 bd bdrs-3', data: { mask: 'cpf' } }
         .mB-3.pX-2
-          = f.input :address_state, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .d-f.mX-2n
-        .mB-3.pX-2
-          = f.input :cpf, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-        .mB-3.pX-2
-          = f.input :rg, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .d-f.mX-2n
-        .mB-3.pX-2
-          = f.input :phone_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-        .mB-3.pX-2
-          = f.input :phone_area_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      .d-f.mX-2n
-        .mB-3.pX-2
-          = f.input :alternative_phone_number, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-        .mB-3.pX-2
-          = f.input :alternative_phone_area_code, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }
-      = button_tag type: 'submit', class: 'd-b fw-700 w-100 mT-30 pY-15 bdrs-3 bg-blue-light c-blue-dark' do
-        | Concluir
-        = icon('arrow-right', class: 'mL-10')
+          = f.input :rg, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+      .d-f.fxw-w.mX-2n.mB-4
+        .md-fxb-1-2.pX-2
+          .d-f.fxw-w.mX-1n
+            .fxb-1-4.pX-1
+              = f.input :phone_area_code, input_html: { class: 'pX-10 pY-10 bd bdrs-3'}
+            .fxb-3-4.pX-1
+              = f.input :phone_number, input_html: { class: 'pX-10 pY-10 bd bdrs-3', data: { mask: 'phone' }}
+        .md-fxb-1-2.pX-2
+          .d-f.fxw-w.mX-1n
+            .fxb-1-4.pX-1
+              = f.input :alternative_phone_area_code, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+            .fxb-3-4.pX-1
+              = f.input :alternative_phone_number, input_html: { class: 'pX-10 pY-10 bd bdrs-3', data: { mask: 'phone' } }
+      h4.mY-3 Endereço
+      .d-f.fxw-w.mX-2n.mB-3
+        .md-fxb-1-2.pX-2
+            = f.label :address_zip_code
+            .loading-input
+              = f.input :address_zip_code, label: false, input_html: { class: 'pX-10 pY-10 bd bdrs-3 js-cep-input', data: { mask: 'cep' }, max_length: 10 }
+        .md-fxb-1-2.pX-2
+          = f.input :address_street, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+      .d-f.fxw-w.mX-2n.mB-3
+        .md-fxb-1-2.pX-2
+          = f.input :address_number, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+        .md-fxb-1-2.pX-2
+          = f.input :address_complement, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+      .d-f.fxw-w.mX-2n.mB-4
+        .md-fxb-1-2.pX-2
+          = f.input :address_city, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+        .md-fxb-1-2.pX-2
+          = f.input :address_state, input_html: { class: 'pX-10 pY-10 bd bdrs-3' }
+      .ta-r.d-f.jc-sb.ai-c
+          = link_to :back do
+            = icon('angle-left', class: 'mR-5')
+            | Voltar
+          = button_tag type: 'submit', class: 'bg-blue-light bdw-0 pX-3 c-white pY-1 bdrs-3 fz-16' do
+            | Concluir
+            = icon('arrow-right', class: 'mL-10')
+
+javascript:
+  $(function () {
+    $('.js-cep-input').on('keyup paste cut', function (e) {
+
+      var CORREIOS_API_URL = 'http://api.postmon.com.br/v1/cep/';
+      var CEP_REGEXP = /\d{2}\.\d{3}\-\d{3}/;
+      var $addressInputs = $('[id^="profile_address"]');
+      var $spinner = $('.loading-input');
+
+      if (CEP_REGEXP.test(this.value)) {
+        $addressInputs.prop('disabled', true);
+        $spinner.addClass('is-loading');
+
+        $.ajax({
+          method: 'GET',
+          url: CORREIOS_API_URL + this.value.replace(/\.|-/g , '')
+        }).done(function (data) {
+          $('#profile_address_street').val(data.logradouro)
+          $('#profile_address_complement').val(data.complemento)
+          $('#profile_address_district').val(data.bairro)
+          $('#profile_address_city').val(data.cidade)
+          $('#profile_address_state').val(data.estado)
+        }).fail(function (e) {
+          toastr.error(e.statusText)
+        }).always(function () {
+          $addressInputs.prop('disabled', false);
+          $spinner.removeClass('is-loading');
+        });
+      }
+    });
+
+  });

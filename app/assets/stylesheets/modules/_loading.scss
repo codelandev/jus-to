@@ -1,0 +1,15 @@
+.loading-input {
+  &.is-loading {
+    position: relative;
+
+    &:before {
+      line-height: 0;
+      content: '\f110';
+      font-family: 'FontAwesome';
+      position: absolute;
+      top: 50%;
+      right: calc(100% + 10px);
+      @extend .fa-pulse;
+    }
+  }
+}
