@@ -10,6 +10,9 @@ class LegalCasesController < ApplicationController
 
   def show
     @case = current_user.legal_cases.find(params[:id])
+    @messages = @case.messages.order(created_at: :desc)
+
+    @message = Message.new
     authorize(@case)
   end
 

@@ -1,17 +1,23 @@
 section.pT-20.pB-100
   .container
-    .md-w-80.mX-a
-      header.mB-60
-        h1.c-blue
-          = icon('hashtag', class: 'mR-1 c-blue-dark')
-          | pr-0012x99a
-        span = l @case.created_at, format: :short
-      .mB-4
-        h3.c-blue Empresa
-        = @case.company
-      .mB-4
-        h3.c-blue Assunto
-        = @case.subject
-      .mB-4
-        h3.c-blue Descrição
-        = @case.description
+    .md-w-80.mX-a.c-white.mT-40.bdrs-3.ov-h
+      = render @case
+    .Messages.md-w-80.mX-a.c-white.mY-40.bdrs-3.ov-h
+      = @messages
+      - @messages.each do |message|
+        .bg-blue.pL-30.pY-20.d-f.fxw-w
+          .md-fxb-11.pR-20
+            .d-f.ai-b.jc-sb
+              h4.c-blue-light = message.author.name
+              .fz-12
+                span.fw-300.mR-1 Recebida dia:
+                span.fw-500 = l message.created_at, format: :short
+
+            p.fw-700.mB-0 = message.content
+
+          .md-fxb-1.ta-r.md-ta-c.p-20.md-p-0
+            button.bdrs-3.bg-blue-light.c-blue data-smooth-scroll="true" href= '#new_message' = icon('reply', class: 'fa-fw fz-20 pY-1')
+
+      = simple_form_for @message, url: legal_case_messages_path(@case), method: :post do |f|
+        = f.input :content, label: false, placeholder: 'Nova mensagem'
+        = f.submit 'Enviar'
