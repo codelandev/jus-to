@@ -80,12 +80,10 @@ RSpec.describe LegalCasePolicy do
     end
 
     context 'when an agent tries to access' do
-      context 'while having a complete profile' do
-        let(:agent) { create(:agent) }
+      let(:agent) { create(:agent) }
 
-        it "denies access" do
-          expect(subject).not_to permit(user, build(:legal_case, user: user))
-        end
+      it "denies access" do
+        expect(subject).not_to permit(agent, build(:legal_case))
       end
     end
   end

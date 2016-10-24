@@ -1,9 +1,9 @@
 .container.pT-50.pB-100
   .md-w-60.mX-a
-    h1.fw-900.fz-24.ta-c.mB-40
-      | Antes de começar, precisamos
-      br
-      | de algumas informações
+    / h1.fw-900.fz-24.ta-c.mB-40
+    /   | Antes de começar, precisamos
+    /   br
+    /   | de algumas informações
     = simple_form_for @profile, url: update_profile_path, html: { class: 'bdrs-3 bd pX-100 pY-4' } do |f|
       .mB-3
         = f.input :name, input_html: { class: 'bd bdc-gray bdrs-3 pX-2 pY-1' }

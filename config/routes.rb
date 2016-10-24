@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   post '/casos', to: 'legal_cases#create', as: nil
   get '/casos/novo', to: 'legal_cases#new', as: :new_legal_case
   get '/casos/:id', to: 'legal_cases#show', as: :legal_case
+  post '/casos/:case_id/mensagens', to: 'messages#create', as: :legal_case_messages
 end
