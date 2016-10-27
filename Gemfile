@@ -28,7 +28,7 @@ gem 'rails-i18n', '~> 4.0.4'
 # Template language that reduce the syntax to the essentials while not cryptic
 gem 'slim-rails', '~> 3.0.1'
 # Parse CSS and add vendor prefixes to rules by Can I Use
-gem 'autoprefixer-rails', '~> 5.2.1'
+gem 'autoprefixer-rails'
 # Front-end framework for developing responsive, mobile first projects
 gem 'bootstrap-sass', '~> 3.3.5'
 # The iconic font and CSS toolkit
@@ -41,6 +41,9 @@ gem 'simple_form'
 gem 'toastr_rails'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
+# A Rails engine that helps you put together a super-flexible admin dashboard
+gem 'administrate'
+gem 'bourbon'
 
 group :development, :test do
   # 'byebug' anywhere in the code to stop execution and get a debugger console

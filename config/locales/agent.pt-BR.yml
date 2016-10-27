@@ -1,0 +1,6 @@
+pt-BR:
+  activerecord:
+    models:
+      agent:
+        one: Agente
+        other: Agentes
